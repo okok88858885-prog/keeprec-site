@@ -163,8 +163,10 @@
 <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
 <script>
 (function () {
-  // Paste your Paddle client-side token (starts with "live_") to activate checkout.
-  // While the placeholder is present the page safely shows "COMING SOON" instead.
+  // Master switch: flip to true only when the Pro build is live on the
+  // Chrome Web Store — never sell what can't be delivered yet.
+  var SELLING = false;
+  if (!SELLING) return;
   var PADDLE_CLIENT_TOKEN = "live_85c68211754efd8cd9c929037ed";
   var PADDLE_PRICE_ID = "pri_01kyehx1jhxexzsr65nw1xcdnv";
 
