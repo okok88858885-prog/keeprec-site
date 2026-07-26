@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>KeepRec — Beautiful screen recordings. Zero cloud.</title>
+<meta name="description" content="Chrome screen recorder with auto-zoom and click effects. Your videos never leave your computer. No watermark, no subscription."/>
+<link rel="icon" href="assets/icon128.png"/>
+<style>
+  * { margin:0; box-sizing:border-box; }
+  :root { --red:#e5484d; --red2:#ff6b70; --bg:#15151d; --card:#1e1e29; --line:#2c2c3a;
+          --txt:#f2f2f7; --dim:#a7a7b8; }
+  body { background:var(--bg); color:var(--txt);
+         font-family:-apple-system,"Segoe UI",Inter,sans-serif; line-height:1.6; }
+  .wrap { max-width:1080px; margin:0 auto; padding:0 24px; }
+  nav { display:flex; align-items:center; gap:12px; padding:22px 0; }
+  nav img { width:36px; height:36px; border-radius:9px; }
+  nav .name { font-weight:800; font-size:20px; }
+  nav .cta { margin-left:auto; }
+  .btn { display:inline-block; background:var(--red); color:#fff; font-weight:700;
+         padding:13px 26px; border-radius:10px; text-decoration:none; font-size:16px;
+         box-shadow:0 10px 26px rgba(229,72,77,.35); }
+  .btn.ghost { background:transparent; border:1px solid var(--line); box-shadow:none; color:var(--txt); }
+  .hero { text-align:center; padding:64px 0 30px; }
+  h1 { font-size:56px; line-height:1.08; letter-spacing:-2px; font-weight:800; }
+  h1 em { color:var(--red2); font-style:normal; }
+  .sub { margin:18px auto 0; max-width:620px; font-size:20px; color:var(--dim); }
+  .heroBtns { margin-top:30px; display:flex; gap:14px; justify-content:center; }
+  .note { margin-top:12px; font-size:13.5px; color:#77778a; }
+  video, .shotImg { width:100%; border-radius:16px; box-shadow:0 40px 90px rgba(0,0,0,.55);
+          display:block; margin:44px auto 0; }
+  section { padding:72px 0 0; }
+  h2 { font-size:36px; letter-spacing:-1px; text-align:center; }
+  h2 + .lead { text-align:center; color:var(--dim); margin-top:10px; font-size:17px; }
+  .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:38px; }
+  .f { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:26px; }
+  .f .ic { font-size:26px; }
+  .f h3 { margin:12px 0 6px; font-size:18px; }
+  .f p { color:var(--dim); font-size:14.5px; }
+  .steps { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:38px; }
+  .s { text-align:center; padding:10px; }
+  .s .n { width:44px; height:44px; border-radius:50%; background:var(--red); color:#fff;
+          font-weight:800; font-size:19px; display:flex; align-items:center;
+          justify-content:center; margin:0 auto 14px; }
+  .s p { color:var(--dim); font-size:15px; }
+  .privacy { background:var(--card); border:1px solid var(--line); border-radius:20px;
+             padding:44px; margin-top:38px; text-align:center; }
+  .privacy .pills { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:22px; }
+  .pill { background:#26262f; border:1px solid var(--line); border-radius:999px;
+          padding:10px 20px; font-size:15px; font-weight:600; }
+  .plans { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:38px; max-width:760px;
+           margin-left:auto; margin-right:auto; }
+  .plan { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:30px; }
+  .plan.hot { border-color:var(--red); }
+  .plan h3 { font-size:20px; }
+  .plan .pr { font-size:38px; font-weight:800; margin:8px 0 4px; }
+  .plan .pr small { font-size:15px; color:var(--dim); font-weight:500; }
+  .plan ul { margin:16px 0 0 18px; color:var(--dim); font-size:15px; }
+  .plan li { margin:7px 0; }
+  footer { margin-top:80px; border-top:1px solid var(--line); padding:30px 0 44px;
+           display:flex; gap:20px; align-items:center; color:#77778a; font-size:14px; }
+  footer a { color:var(--dim); }
+  @media (max-width:820px){ .grid,.steps,.plans{grid-template-columns:1fr}
+    h1{font-size:38px} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <img src="assets/icon128.png" alt="KeepRec"/><span class="name">KeepRec</span>
+    <a class="btn cta" href="#" id="install">Add to Chrome — Free</a>
+  </nav>
+
+  <div class="hero">
+    <h1>Beautiful screen recordings.<br/><em>Zero cloud.</em></h1>
+    <p class="sub">KeepRec records your browser tab with auto-zoom and click effects —
+      and every video stays on your computer. No watermark. No subscription.</p>
+    <div class="heroBtns">
+      <a class="btn" href="#" id="install2">Add to Chrome — Free</a>
+      <a class="btn ghost" href="#pricing">See pricing</a>
+    </div>
+    <p class="note">Free forever · No account · Exports plain MP4</p>
+    <video src="assets/demo.mp4" autoplay muted loop playsinline></video>
+  </div>
+
+  <section>
+    <h2>Recordings that look <span style="color:var(--red2)">edited</span> — with zero editing</h2>
+    <p class="lead">Everything happens live, while you record.</p>
+    <div class="grid">
+      <div class="f"><div class="ic">🎯</div><h3>Auto-zoom on clicks</h3>
+        <p>The camera smoothly zooms into whatever you click, then eases back out. Like a pro editor followed your cursor.</p></div>
+      <div class="f"><div class="ic">💥</div><h3>Click ripples</h3>
+        <p>Every click gets a subtle highlight, so viewers never lose track of what you did.</p></div>
+      <div class="f"><div class="ic">🖼️</div><h3>Beautiful frames</h3>
+        <p>Your page floats on a gradient backdrop with rounded corners and a soft shadow — publish-ready.</p></div>
+      <div class="f"><div class="ic">⇄</div><h3>Follow across tabs</h3>
+        <p>Opened a new tab mid-demo? One click on the icon brings the recording with you.</p></div>
+      <div class="f"><div class="ic">🎙️</div><h3>Voice &amp; camera</h3>
+        <p>Narrate with your microphone and add a camera bubble when you want a face on the demo.</p></div>
+      <div class="f"><div class="ic">💾</div><h3>Plain MP4 out</h3>
+        <p>Stop recording, save the file. It's a normal video — share it anywhere, keep it forever.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Three clicks to a finished video</h2>
+    <div class="steps">
+      <div class="s"><div class="n">1</div><h3>Record</h3><p>Click the KeepRec icon and hit "Record this tab".</p></div>
+      <div class="s"><div class="n">2</div><h3>Demo</h3><p>Just do your thing — clicks are highlighted and zoomed automatically.</p></div>
+      <div class="s"><div class="n">3</div><h3>Save</h3><p>Hit stop. Your MP4 opens instantly, ready to share.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Your videos are <span style="color:var(--red2)">yours</span></h2>
+    <div class="privacy">
+      <p style="max-width:640px;margin:0 auto;color:var(--dim);font-size:17px">
+        Most recorders upload your videos to their cloud and hold them behind a subscription —
+        stop paying, lose your library. KeepRec never uploads anything. Recording, rendering
+        and storage all happen locally, in your browser.</p>
+      <div class="pills">
+        <div class="pill">🔒 No cloud</div><div class="pill">🙅 No account</div>
+        <div class="pill">📤 No upload</div><div class="pill">📊 No tracking</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <h2>Simple pricing. No subscription — ever.</h2>
+    <div class="plans">
+      <div class="plan">
+        <h3>Free</h3><div class="pr">$0</div>
+        <ul>
+          <li>Unlimited recordings, unlimited length</li>
+          <li>Auto-zoom + click effects</li>
+          <li>Beautiful frames</li>
+          <li>No watermark</li>
+        </ul>
+      </div>
+      <div class="plan hot">
+        <h3>Pro <span id="proSoon" style="color:var(--red2);font-size:13px">COMING SOON</span></h3>
+        <div class="pr">$29 <small>once, yours forever</small></div>
+        <ul>
+          <li>Everything in Free</li>
+          <li>Editable zoom track — add, move or remove zooms after recording</li>
+          <li>Custom backdrop colors</li>
+          <li>Priority support</li>
+        </ul>
+        <a class="btn" href="#" id="buyPro" style="display:none;margin-top:20px">Get Pro — $29</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <img src="assets/icon128.png" style="width:26px;height:26px;border-radius:7px" alt=""/>
+    <span>© 2026 KeepRec</span>
+    <a href="privacy.html" style="margin-left:auto">Privacy policy</a>
+    <a href="terms.html">Terms of service</a>
+    <a href="refunds.html">Refund policy</a>
+    <a href="mailto:keeprec.support@gmail.com">Contact</a>
+  </footer>
+</div>
+<script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+<script>
+(function () {
+  // Paste your Paddle client-side token (starts with "live_") to activate checkout.
+  // While the placeholder is present the page safely shows "COMING SOON" instead.
+  var PADDLE_CLIENT_TOKEN = "live_85c68211754efd8cd9c929037ed";
+  var PADDLE_PRICE_ID = "pri_01kyehx1jhxexzsr65nw1xcdnv";
+
+  if (PADDLE_CLIENT_TOKEN.indexOf("TODO") !== -1 || typeof Paddle === "undefined") return;
+
+  Paddle.Initialize({ token: PADDLE_CLIENT_TOKEN });
+
+  var btn = document.getElementById("buyPro");
+  document.getElementById("proSoon").style.display = "none";
+  btn.style.display = "inline-block";
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+    Paddle.Checkout.open({
+      items: [{ priceId: PADDLE_PRICE_ID, quantity: 1 }],
+      settings: { theme: "dark" }
+    });
+  });
+})();
+</script>
+</body>
+</html>
