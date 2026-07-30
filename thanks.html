@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>You're Pro! — KeepRec</title>
+<meta name="robots" content="noindex"/>
+<link rel="icon" href="assets/icon128.png"/>
+<style>
+  * { margin:0; box-sizing:border-box; }
+  :root { --red:#e5484d; --red2:#ff6b70; --bg:#15151d; --card:#1e1e29; --line:#2c2c3a;
+          --txt:#f2f2f7; --dim:#a7a7b8; }
+  body { background:var(--bg); color:var(--txt);
+         font-family:-apple-system,"Segoe UI",Inter,sans-serif; line-height:1.6; }
+  .wrap { max-width:660px; margin:0 auto; padding:0 24px; }
+  nav { display:flex; align-items:center; gap:12px; padding:22px 0; }
+  nav img { width:36px; height:36px; border-radius:9px; }
+  nav .name { font-weight:800; font-size:20px; }
+  .hero { text-align:center; padding:56px 0 24px; }
+  .check { width:76px; height:76px; border-radius:50%; background:var(--red); margin:0 auto 22px;
+           display:flex; align-items:center; justify-content:center; font-size:38px;
+           box-shadow:0 14px 40px rgba(229,72,77,.4); }
+  h1 { font-size:42px; line-height:1.1; letter-spacing:-1.5px; font-weight:800; }
+  h1 em { color:var(--red2); font-style:normal; }
+  .sub { margin:14px auto 0; font-size:18px; color:var(--dim); }
+  .steps { margin-top:40px; display:grid; gap:14px; text-align:left; }
+  .s { background:var(--card); border:1px solid var(--line); border-radius:16px;
+       padding:22px 24px; display:flex; gap:18px; align-items:flex-start; }
+  .s .n { flex:none; width:36px; height:36px; border-radius:50%; background:var(--red); color:#fff;
+          font-weight:800; font-size:16px; display:flex; align-items:center; justify-content:center; }
+  .s h3 { font-size:17px; margin-bottom:4px; }
+  .s p { color:var(--dim); font-size:14.5px; }
+  .s code { background:#26262f; border:1px solid var(--line); border-radius:6px;
+            padding:2px 8px; font-size:13.5px; color:var(--txt); }
+  .help { margin-top:34px; text-align:center; color:#77778a; font-size:14px; padding-bottom:60px; }
+  .help a { color:var(--dim); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <img src="assets/icon128.png" alt="KeepRec"/><span class="name">KeepRec</span>
+  </nav>
+
+  <div class="hero">
+    <div class="check">✓</div>
+    <h1>Payment complete.<br/><em>Let's unlock Pro.</em></h1>
+    <p class="sub">Your receipt is on its way from Paddle. Activation takes 30 seconds:</p>
+
+    <div class="steps">
+      <div class="s"><div class="n">1</div><div>
+        <h3>Open KeepRec</h3>
+        <p>Click the KeepRec icon in your Chrome toolbar. Don't have it yet?
+           <a href="https://chromewebstore.google.com/detail/keeprec-%E2%80%94-screen-recorder/lflpfhebiegndjkijddiobadcneofpoj"
+              style="color:var(--red2)">Add it to Chrome first</a>.</p>
+      </div></div>
+      <div class="s"><div class="n">2</div><div>
+        <h3>Enter your purchase email</h3>
+        <p>In the popup, type the <strong>same email you used at checkout</strong> and press
+           <code>Activate</code>.</p>
+      </div></div>
+      <div class="s"><div class="n">3</div><div>
+        <h3>You're Pro — forever</h3>
+        <p>The Pro badge lights up: editable zoom track, custom backdrop colors, priority support.
+           No subscription, ever.</p>
+      </div></div>
+    </div>
+
+    <p class="help">Didn't work? Email
+      <a href="mailto:keeprec.support@gmail.com">keeprec.support@gmail.com</a>
+      with your receipt — we reply fast for Pro users.</p>
+  </div>
+</div>
+</body>
+</html>

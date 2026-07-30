@@ -181,7 +181,7 @@
     e.preventDefault();
     Paddle.Checkout.open({
       items: [{ priceId: PADDLE_PRICE_ID, quantity: 1 }],
-      settings: { theme: "dark" }
+      settings: { theme: "dark", successUrl: "https://keep-rec.com/thanks.html" }
     });
   });
 })();
